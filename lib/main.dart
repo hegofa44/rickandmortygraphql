@@ -99,9 +99,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     
                     itemCount: characterList.length,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      mainAxisSpacing: 20.0,
+                      mainAxisSpacing: 5.0,
                       crossAxisSpacing: 2.0,
-                      childAspectRatio: 0.9,
+                      childAspectRatio: 5/6,
                       crossAxisCount: 2,
                       ),
                     itemBuilder: (context, index) {
@@ -162,7 +162,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             color: Colors.grey[300],
                             ),
                             width: double.infinity,
-                            child: Text(characterList[index]['name']),
+                            child: Text(characterList[index]['name'], style: TextStyle(fontWeight: FontWeight.bold),overflow: TextOverflow.ellipsis,textAlign: TextAlign.center,),
                           )
                         ],
                       );
